@@ -11,8 +11,11 @@
         formType: '@'
       },
       link: function(scope){
-       scope.create = function(){
-         scope.grumble.$save()
+        scope.create = function(){
+          scope.grumble.$save()
+        }
+        scope.update = function(){
+          scope.grumble.$update({id: scope.grumble.id})
         }
       }
     }
