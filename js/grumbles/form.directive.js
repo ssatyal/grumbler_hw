@@ -1,3 +1,5 @@
+"use strict";
+
 (function(){
   angular
   .module('grumbles')
@@ -16,6 +18,9 @@
         }
         scope.update = function(){
           scope.grumble.$update({id: scope.grumble.id})
+        }
+        scope.delete = function(){
+          scope.grumble.$delete({id: scope.grumble.id})
         }
       }
     }
